@@ -13,17 +13,22 @@ export const Button: FC<PropsWithChildren<Props>> = ({
   children,
   variant = "primary",
   icon,
+  className,
+  ...rest
 }) => {
   return (
     <HButton as={Fragment}>
       {() => (
         <button
+          {...rest}
           className={clsx(
+            "ripple",
             "flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-medium",
             variant === "secondary" &&
               "bg-button-secondary-base hover:bg-button-secondary-hover text-button-secondary-text",
             variant === "primary" &&
               "bg-button-primary-base hover:bg-button-primary-hover text-button-primary-text",
+            className,
           )}
         >
           {icon && <Icon size={1.25} iconName={icon} />}

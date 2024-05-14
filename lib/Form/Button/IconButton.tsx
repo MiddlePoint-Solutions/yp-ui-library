@@ -15,18 +15,23 @@ export const IconButton: FC<Props> = ({
   variant = "primary",
   size = 1.75,
   icon,
+  className,
+  ...rest
 }) => {
   return (
     <HButton as={Fragment}>
       {() => (
         <button
+          {...rest}
           className={twMerge(
             clsx(
+              "ripple",
               "flex items-center p-4 text-sm rounded-xl",
               variant === "secondary" &&
                 "bg-button-secondary-base hover:bg-button-secondary-hover text-button-secondary-text",
               variant === "primary" &&
                 "bg-button-primary-base hover:bg-button-primary-hover text-button-primary-text",
+              className,
             ),
           )}
         >
