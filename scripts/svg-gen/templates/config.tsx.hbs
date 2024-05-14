@@ -1,0 +1,15 @@
+{{#each icons}}
+import {{this}} from './{{this}}';
+{{/each}}
+
+export enum EIcon {
+{{#each icons}}
+	{{this}} = '{{this}}',
+{{/each}}
+}
+
+export const iconMap: Record<EIcon, React.FC> = {
+{{#each icons}}
+	[EIcon.{{this}}]: {{this}},
+{{/each}}
+}
