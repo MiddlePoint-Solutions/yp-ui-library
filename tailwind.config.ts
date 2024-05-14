@@ -51,6 +51,17 @@ export default {
             },
           },
         },
+        grayish: {
+          200: "#D9D9D9", // light grey
+          400: "#7A7A7A", // medium grey
+          500: "#6D747D", // medium-dark grey with a blueish tint
+          600: "#5F6166", // dark grey
+          700: "#5A5D61", // dark grey with a subtle blueish hue
+          800: "#55575C", // darker grey with a hint of blue
+          900: "#424447", // dark grey
+          950: "#262729", // very dark grey, almost black
+          1000: "#1D1E1F", // almost black
+        },
       },
       fontSize: {
         xss: ["0.625rem", { lineHeight: "0.75rem" }],
