@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 
 import { Icon } from "./Icon";
+import { Typography } from "../Typography/Typography";
 import React from "react";
 import { EIcon } from "./assets/lib/config";
 
@@ -10,7 +11,6 @@ const meta = {
   component: Icon,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: "centered",
     backgrounds: {
       default: "white",
     },
@@ -40,10 +40,13 @@ export const AllIcons: Story = {
     const allIcons = Object.keys(EIcon).map((iconName) => iconName);
 
     return (
-      <div className="flex gap-2 flex-wrap">
+      <div className="w-full grid grid-cols-6">
         {allIcons.map((iconName) => {
           return (
-            <Icon {...props} iconName={iconName as EIcon} key={iconName} />
+            <div className="flex flex-col gap-1 items-center mb-2">
+              <Icon {...props} iconName={iconName as EIcon} key={iconName} />
+              <Typography variant={0}>{iconName}</Typography>
+            </div>
           );
         })}
       </div>
