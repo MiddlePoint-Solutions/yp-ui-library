@@ -23,6 +23,8 @@ export const Example: Story = {
   },
   args: {},
   render: ({ value, onChange }) => {
-    return <Input value={value} onChange={onChange} />;
+    return (
+      <Input placeholder="jamil@email.com" value={value} onChange={onChange} />
+    );
   },
 };
