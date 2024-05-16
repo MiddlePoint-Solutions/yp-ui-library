@@ -2,6 +2,8 @@ import uniqueId from "lodash/uniqueId";
 
 import React from "react";
 import { EIcon, iconMap } from "./assets/lib/config";
+import { twMerge } from "tailwind-merge";
+import clsx from "clsx";
 
 export interface IconProps {
   iconName: EIcon;
@@ -24,7 +26,7 @@ export const Icon: React.FC<IconProps> = (props) => {
         height: `${size}em`,
         color,
       }}
-      className={`flex ${className}`}
+      className={twMerge(clsx("flex", className))}
     >
       <IconComponent
         style={{
