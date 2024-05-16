@@ -2,7 +2,7 @@
   "name": "yp-ui-library",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "dev": "storybook dev -p 6006",
     "test": "vitest run",
