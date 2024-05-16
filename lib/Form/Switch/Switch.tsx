@@ -1,18 +1,23 @@
 import React from "react";
-import { Switch as HSwitch } from "@headlessui/react";
+import {
+  Switch as HSwitch,
+  SwitchProps as HSwitchProps,
+} from "@headlessui/react";
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
 
-interface Props {
+export interface SwitchProps extends HSwitchProps {
   disabled?: boolean;
   checked: boolean;
   setChecked: (enabled: boolean) => void;
 }
 
-export const Switch: React.FC<Props> = ({
+export const Switch: React.FC<SwitchProps> = ({
   checked = true,
   disabled,
   setChecked,
+  className,
+  ...rest
 }) => {
   return (
     <HSwitch
@@ -23,8 +28,10 @@ export const Switch: React.FC<Props> = ({
         clsx(
           "group inline-flex h-5 w-9 items-center rounded-full  transition",
           "bg-grayish-900 border border-grayish-600",
+          className,
         ),
       )}
+      {...rest}
     >
       {({ checked, disabled }) => (
         <span
