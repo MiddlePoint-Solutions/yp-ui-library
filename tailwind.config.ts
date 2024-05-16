@@ -64,7 +64,9 @@ export default {
         },
       },
       fontSize: {
-        xss: ["0.625rem", { lineHeight: "0.75rem" }],
+        caption: ["0.5625rem", { lineHeight: "auto" }],
+        xss: ["0.625rem", { lineHeight: "auto" }],
+        "text-6xl": ["3.75rem", { lineHeight: "1" }],
       },
     },
   },
