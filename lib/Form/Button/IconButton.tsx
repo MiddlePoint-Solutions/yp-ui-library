@@ -5,13 +5,13 @@ import { EIcon } from "../../Icon/assets/lib/config";
 import { Icon } from "../../Icon/Icon";
 import { twMerge } from "tailwind-merge";
 
-interface Props extends ButtonProps {
+export interface IconButtonProps extends ButtonProps {
   variant?: "primary" | "secondary";
   icon?: EIcon;
   size?: number;
 }
 
-export const IconButton: FC<Props> = ({
+export const IconButton: FC<IconButtonProps> = ({
   variant = "primary",
   size = 1.75,
   icon,

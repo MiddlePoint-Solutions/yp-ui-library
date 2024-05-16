@@ -1,15 +1,18 @@
-import { Button as HButton, ButtonProps } from "@headlessui/react";
+import {
+  Button as HButton,
+  ButtonProps as HButtonProps,
+} from "@headlessui/react";
 import clsx from "clsx";
 import { FC, Fragment, PropsWithChildren } from "react";
 import { EIcon } from "../../Icon/assets/lib/config";
 import { Icon } from "../../Icon/Icon";
 
-interface Props extends ButtonProps {
+export interface ButtonProps extends HButtonProps {
   variant?: "primary" | "secondary";
   icon?: EIcon;
 }
 
-export const Button: FC<PropsWithChildren<Props>> = ({
+export const Button: FC<PropsWithChildren<ButtonProps>> = ({
   children,
   variant = "primary",
   icon,
