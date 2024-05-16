@@ -12,7 +12,7 @@ const meta = {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
     backgrounds: {
-      default: "white",
+      default: "black",
     },
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
@@ -46,6 +46,41 @@ export const Secondary: Story = {
   args: {
     children: "Button",
     variant: "secondary",
+  },
+  render: (props) => {
+    return <Button {...props} />;
+  },
+};
+
+// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+export const Ghost: Story = {
+  args: {
+    children: "Button",
+    variant: "ghost",
+  },
+  render: (props) => {
+    return <Button {...props} />;
+  },
+};
+
+// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+export const NoIndent: Story = {
+  args: {
+    children: "Button",
+    variant: "primary",
+    noIndent: true,
+  },
+  render: (props) => {
+    return <Button {...props} />;
+  },
+};
+
+// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+export const Text: Story = {
+  args: {
+    children: "Button",
+    variant: "text",
+    noIndent: true,
   },
   render: (props) => {
     return <Button {...props} />;
