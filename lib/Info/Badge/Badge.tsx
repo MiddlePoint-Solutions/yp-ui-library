@@ -2,12 +2,12 @@ import clsx from "clsx";
 import React, { PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 
-interface Props {
+export interface BadgeProps {
   className?: string;
   variant?: "primary" | "secondary";
 }
 
-export const Badge: React.FC<PropsWithChildren<Props>> = ({
+export const Badge: React.FC<PropsWithChildren<BadgeProps>> = ({
   className,
   children,
   variant = "primary",
