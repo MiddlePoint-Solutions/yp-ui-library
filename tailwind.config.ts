@@ -62,6 +62,14 @@ export default {
           950: "#262729", // very dark grey, almost black
           1000: "#1D1E1F", // almost black
         },
+        background: {
+          get menu() {
+            return Color(`#1D1E1F`).alpha(0.5).rgb().string();
+          },
+          get menuContent() {
+            return Color(`#262729`).alpha(0.8).rgb().string();
+          },
+        },
       },
       fontSize: {
         caption: ["0.5625rem", { lineHeight: "auto" }],
