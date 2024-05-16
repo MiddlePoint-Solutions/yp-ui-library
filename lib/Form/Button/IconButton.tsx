@@ -1,6 +1,6 @@
 import { Button as HButton, ButtonProps } from "@headlessui/react";
 import clsx from "clsx";
-import { FC, Fragment } from "react";
+import { FC, Fragment, forwardRef } from "react";
 import { EIcon } from "../../Icon/assets/lib/config";
 import { Icon } from "../../Icon/Icon";
 import { twMerge } from "tailwind-merge";
@@ -11,18 +11,17 @@ export interface IconButtonProps extends ButtonProps {
   size?: number;
 }
 
-export const IconButton: FC<IconButtonProps> = ({
-  variant = "primary",
-  size = 1.75,
-  icon,
-  className,
-  ...rest
-}) => {
+export const IconButton: FC<IconButtonProps> = forwardRef<
+  HTMLButtonElement,
+  IconButtonProps
+>((props, ref) => {
+  const { variant = "primary", size = 1.75, icon, className, ...rest } = props;
   return (
     <HButton as={Fragment}>
       {() => (
         <button
           {...rest}
+          ref={ref}
           className={twMerge(
             clsx(
               "ripple",
@@ -40,4 +39,4 @@ export const IconButton: FC<IconButtonProps> = ({
       )}
     </HButton>
   );
-};
+});
