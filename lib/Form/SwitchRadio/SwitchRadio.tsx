@@ -11,14 +11,15 @@ interface SwithRadioProps {
   options: SwitchRadioOption[];
   selected: string;
   onChange: (selected: string) => void;
+  className?: string;
 }
 
 export const SwitchRadio: React.FC<SwithRadioProps> = ({
   options,
   selected,
   onChange,
+  className,
 }) => {
-  console.log({ selected });
   const optionRef = React.useRef<HTMLLabelElement | null>(null);
   const selectedIndex = options.findIndex(
     (option) => option.value === selected,
@@ -36,6 +37,7 @@ export const SwitchRadio: React.FC<SwithRadioProps> = ({
         clsx(
           "relative group inline-flex h-5 items-center rounded-full  transition",
           "bg-grayish-900 border border-grayish-600",
+          className,
         ),
       )}
     >

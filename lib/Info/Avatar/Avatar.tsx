@@ -17,7 +17,7 @@ export const Avatar: React.FC<AvatarProps> = ({
     <img
       className={twMerge(
         clsx(
-          "inline-block h-10 w-10 rounded-full ring-2 ring-white",
+          "inline-block border-0 ring-0 shadow-none h-10 w-10 rounded-full ring-white",
           variant === "rounded" ? "rounded-full" : "rounded-md",
           className,
         ),
