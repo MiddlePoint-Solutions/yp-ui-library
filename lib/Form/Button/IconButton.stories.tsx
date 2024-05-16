@@ -50,3 +50,14 @@ export const Secondary: Story = {
     return <IconButton {...props} />;
   },
 };
+
+// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
+export const Ghost: Story = {
+  args: {
+    variant: "ghost",
+    icon: EIcon.Logout,
+  },
+  render: (props) => {
+    return <IconButton {...props} />;
+  },
+};

@@ -6,7 +6,7 @@ import { Icon } from "../../Icon/Icon";
 import { twMerge } from "tailwind-merge";
 
 export interface IconButtonProps extends ButtonProps {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "ghost";
   icon?: EIcon;
   size?: number;
 }
@@ -30,6 +30,8 @@ export const IconButton: FC<IconButtonProps> = forwardRef<
                 "bg-button-secondary-base hover:bg-button-secondary-hover text-button-secondary-text",
               variant === "primary" &&
                 "bg-button-primary-base hover:bg-button-primary-hover text-button-primary-text",
+              variant === "ghost" &&
+                "bg-transparent hover:bg-grayish-400 text-white",
               className,
             ),
           )}
