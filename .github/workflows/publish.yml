@@ -29,6 +29,6 @@ jobs:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - name: Publish
-        run: yarn npm publish
+        run: yarn npm publish --no-private
         env:
           NPM_TOKEN: ${{secrets.NPM_TOKEN}}
