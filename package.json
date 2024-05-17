@@ -1,5 +1,5 @@
 {
-  "name": "yp-ui-library",
+  "name": "@yogaplay/yp-ui-library",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
