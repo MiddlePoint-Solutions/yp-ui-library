@@ -1,6 +1,6 @@
 {
   "name": "@yogaplay/yp-ui-library",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "dev": "storybook dev -p 6006",
