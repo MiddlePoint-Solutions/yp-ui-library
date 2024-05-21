@@ -3711,6 +3711,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/color-convert@npm:*":
+  version: 2.0.3
+  resolution: "@types/color-convert@npm:2.0.3"
+  dependencies:
+    "@types/color-name": "npm:*"
+  checksum: 10c0/a5870547660f426cddd76b54e942703e29c3b43fc26b1ba567e10b9707d144b7d8863e0af7affd9c3391815c06582571f43835c71ede270a6c58949155d18b77
+  languageName: node
+  linkType: hard
+
+"@types/color-name@npm:*":
+  version: 1.1.4
+  resolution: "@types/color-name@npm:1.1.4"
+  checksum: 10c0/11a5b67408a53a972fa98e4bbe2b0ff4cb74a3b3abb5f250cb5ec7b055a45aa8e00ddaf39b8327ef683ede9b2ff9b3ee9d25cd708d12b1b6a9aee5e8e6002920
+  languageName: node
+  linkType: hard
+
+"@types/color@npm:^3.0.6":
+  version: 3.0.6
+  resolution: "@types/color@npm:3.0.6"
+  dependencies:
+    "@types/color-convert": "npm:*"
+  checksum: 10c0/79267eeb67f9d11761aecee36bb1503fb8daa699b9ae7e036fc23a74380e5b130c5c0f6d7adafabba89256e46f36ee4d3e28e0ac7e107e8258550eae7d091acf
+  languageName: node
+  linkType: hard
+
 "@types/connect@npm:*":
   version: 3.4.38
   resolution: "@types/connect@npm:3.4.38"
@@ -4390,6 +4415,7 @@ __metadata:
     "@svgr/plugin-jsx": "npm:^8.1.0"
     "@svgr/plugin-prettier": "npm:^8.1.0"
     "@svgr/plugin-svgo": "npm:^8.1.0"
+    "@types/color": "npm:^3.0.6"
     "@types/lodash": "npm:^4"
     "@types/react": "npm:^18.2.66"
     "@types/react-dom": "npm:^18.2.22"
