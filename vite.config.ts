@@ -6,7 +6,7 @@ import { peerDependencies } from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts({ rollupTypes: true })],
+  plugins: [react(), dts()],
   build: {
     target: "esnext",
     minify: false,
