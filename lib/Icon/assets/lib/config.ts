@@ -1,4 +1,7 @@
+import Apple from "./Apple";
 import Bars from "./Bars";
+import Facebook from "./Facebook";
+import Google from "./Google";
 import Listen from "./Listen";
 import Logout from "./Logout";
 import Note from "./Note";
@@ -8,10 +11,13 @@ import Play from "./Play";
 import Ring from "./Ring";
 import Search from "./Search";
 import X from "./X";
-import { HTMLAttributes } from "react";
+import { SVGProps } from "react";
 
 export enum EIcon {
+  Apple = "Apple",
   Bars = "Bars",
+  Facebook = "Facebook",
+  Google = "Google",
   Listen = "Listen",
   Logout = "Logout",
   Note = "Note",
@@ -23,11 +29,11 @@ export enum EIcon {
   X = "X",
 }
 
-export const iconMap: Record<
-  EIcon,
-  React.FC<HTMLAttributes<HTMLOrSVGElement>>
-> = {
+export const iconMap: Record<EIcon, React.FC<SVGProps<SVGSVGElement>>> = {
+  [EIcon.Apple]: Apple,
   [EIcon.Bars]: Bars,
+  [EIcon.Facebook]: Facebook,
+  [EIcon.Google]: Google,
   [EIcon.Listen]: Listen,
   [EIcon.Logout]: Logout,
   [EIcon.Note]: Note,

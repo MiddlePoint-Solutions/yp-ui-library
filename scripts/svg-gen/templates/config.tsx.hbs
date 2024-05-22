@@ -1,6 +1,7 @@
 {{#each icons}}
 import {{this}} from './{{this}}';
 {{/each}}
+import { SVGProps } from "react";
 
 export enum EIcon {
 {{#each icons}}
@@ -8,7 +9,7 @@ export enum EIcon {
 {{/each}}
 }
 
-export const iconMap: Record<EIcon, React.FC> = {
+export const iconMap: Record<EIcon, React.FC<SVGProps<SVGSVGElement>>> = {
 {{#each icons}}
 	[EIcon.{{this}}]: {{this}},
 {{/each}}
