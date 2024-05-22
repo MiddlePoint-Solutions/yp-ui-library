@@ -1,1 +1,1 @@
-export { SwitchRadio } from "./SwitchRadio";
+export * from "./SwitchRadio";
