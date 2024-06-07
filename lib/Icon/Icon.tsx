@@ -1,5 +1,3 @@
-import uniqueId from "lodash/uniqueId";
-
 import React from "react";
 import { EIcon, iconMap } from "./assets/lib/config";
 import { twMerge } from "tailwind-merge";
@@ -34,7 +32,6 @@ export const Icon: React.FC<IconProps> = (props) => {
           height: `${size}em`,
           strokeWidth: `${strokeWidth}`,
         }}
-        id={uniqueId()}
       />
     </span>
   );
