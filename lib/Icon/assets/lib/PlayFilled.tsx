@@ -5,7 +5,6 @@ const PlayFilled = (props: SVGProps<SVGSVGElement>) => (
     width="1em"
     height="1em"
     fill="none"
-    color="#000"
     viewBox="0 0 24 24"
     {...props}
   >
