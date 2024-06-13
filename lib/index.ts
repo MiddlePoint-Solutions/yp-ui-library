@@ -6,6 +6,7 @@ export * from "./Form/Label";
 export * from "./Form/SwitchRadio";
 export * from "./Form/Input";
 export * from "./Form/TextArea";
+export { Field } from "@headlessui/react";
 
 export * from "./Icon";
 
