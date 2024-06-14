@@ -12,6 +12,7 @@ export * from "./Icon";
 
 export * from "./Info/Badge";
 export * from "./Info/Avatar";
+export * from "./Info/Toast";
 
 export * from "./Menu";
 export * from "./Typography";
