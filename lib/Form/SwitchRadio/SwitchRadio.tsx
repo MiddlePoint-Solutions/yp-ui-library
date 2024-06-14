@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { useMemo } from "react";
+import React, { forwardRef, useMemo } from "react";
 import { twMerge } from "tailwind-merge";
 
 interface SwitchRadioOption {
@@ -14,12 +14,10 @@ interface SwithRadioProps {
   className?: string;
 }
 
-export const SwitchRadio: React.FC<SwithRadioProps> = ({
-  options,
-  selected,
-  onChange,
-  className,
-}) => {
+export const SwitchRadio: React.FC<SwithRadioProps> = forwardRef<
+  HTMLInputElement,
+  SwithRadioProps
+>(({ options, selected, onChange, className }, ref) => {
   const optionRef = React.useRef<HTMLLabelElement | null>(null);
   const selectedIndex = options.findIndex(
     (option) => option.value === selected,
@@ -57,6 +55,7 @@ export const SwitchRadio: React.FC<SwithRadioProps> = ({
             value={option.value}
             checked={selected === option.value}
             className="hidden"
+            ref={ref}
           />
           <span className="text-xss p-1 text-grayish-500">{option.label}</span>
         </label>
@@ -70,4 +69,4 @@ export const SwitchRadio: React.FC<SwithRadioProps> = ({
       />
     </div>
   );
-};
+});

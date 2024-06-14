@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import {
   Switch as HSwitch,
   SwitchProps as HSwitchProps,
@@ -12,13 +12,10 @@ export interface SwitchProps extends HSwitchProps {
   setChecked: (enabled: boolean) => void;
 }
 
-export const Switch: React.FC<SwitchProps> = ({
-  checked = true,
-  disabled,
-  setChecked,
-  className,
-  ...rest
-}) => {
+export const Switch: React.FC<SwitchProps> = forwardRef<
+  HTMLButtonElement,
+  SwitchProps
+>(({ checked = true, disabled, setChecked, className, ...rest }, ref) => {
   return (
     <HSwitch
       checked={checked}
@@ -32,6 +29,7 @@ export const Switch: React.FC<SwitchProps> = ({
         ),
       )}
       {...rest}
+      ref={ref}
     >
       {({ checked, disabled }) => (
         <span
@@ -49,4 +47,4 @@ export const Switch: React.FC<SwitchProps> = ({
       )}
     </HSwitch>
   );
-};
+});
