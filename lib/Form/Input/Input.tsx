@@ -1,4 +1,4 @@
-import React, { Fragment, forwardRef } from "react";
+import { Fragment, forwardRef } from "react";
 
 import { Input as HInput, InputProps as HInputProps } from "@headlessui/react";
 import { twMerge } from "tailwind-merge";
