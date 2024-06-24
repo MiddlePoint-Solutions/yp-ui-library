@@ -36,7 +36,7 @@ export const Button = forwardRef<
           className={twMerge(
             clsx(
               "ripple",
-              "flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-medium",
+              "flex justify-center items-center gap-2 px-8 py-4 rounded-xl text-sm font-medium",
               variant === "secondary" &&
                 "bg-button-secondary-base hover:bg-button-secondary-hover text-button-secondary-text",
               variant === "primary" &&

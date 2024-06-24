@@ -11,6 +11,7 @@ import PlayFilled from './PlayFilled';
 import Play from './Play';
 import Ring from './Ring';
 import Search from './Search';
+import Stack from './Stack';
 import X from './X';
 import { SVGProps } from "react";
 
@@ -28,6 +29,7 @@ export enum EIcon {
 	Play = 'Play',
 	Ring = 'Ring',
 	Search = 'Search',
+	Stack = 'Stack',
 	X = 'X',
 }
 
@@ -45,5 +47,6 @@ export const iconMap: Record<EIcon, React.FC<SVGProps<SVGSVGElement>>> = {
 	[EIcon.Play]: Play,
 	[EIcon.Ring]: Ring,
 	[EIcon.Search]: Search,
+	[EIcon.Stack]: Stack,
 	[EIcon.X]: X,
 }
