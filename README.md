@@ -1,6 +1,6 @@
 # yp-ui-library
 
-This is a private UI library for Yoga Play app.
+This is a private UI library for Human Limits app.
 
 ## Installation
 
