@@ -5,15 +5,18 @@ import { twMerge } from "../../twMerge";
 export interface BadgeProps {
   className?: string;
   variant?: "primary" | "secondary" | "contrast";
+  onClick?: () => void;
 }
 
 export const Badge: React.FC<PropsWithChildren<BadgeProps>> = ({
   className,
   children,
+  onClick,
   variant = "primary",
 }) => {
   return (
     <span
+      onClick={onClick}
       className={twMerge(
         clsx(
           "rounded-md px-[10px] py-[5px] text-xss",
