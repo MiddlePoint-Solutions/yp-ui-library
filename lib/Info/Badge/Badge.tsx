@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import React, { PropsWithChildren } from "react";
-import { twMerge } from "tailwind-merge";
+import { twMerge } from "../../twMerge";
 
 export interface BadgeProps {
   className?: string;

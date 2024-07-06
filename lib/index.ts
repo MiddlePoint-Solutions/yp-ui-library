@@ -20,3 +20,5 @@ export * from "./Typography";
 import tailwindConfig from "../tailwind.config";
 
 export { tailwindConfig };
+
+export { twMerge } from "./twMerge";
