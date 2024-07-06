@@ -4,7 +4,7 @@ import { twMerge } from "tailwind-merge";
 
 export interface BadgeProps {
   className?: string;
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "contrast";
 }
 
 export const Badge: React.FC<PropsWithChildren<BadgeProps>> = ({
@@ -21,6 +21,7 @@ export const Badge: React.FC<PropsWithChildren<BadgeProps>> = ({
             "bg-badge-primary-base text-badge-primary-text",
           variant === "secondary" &&
             "bg-badge-secondary-base text-badge-secondary-text",
+          variant === "contrast" && "bg-woodsmoke-950 text-amber-500",
           className,
         ),
       )}

@@ -40,3 +40,13 @@ export const Secondary: Story = {
     return <Badge {...props} />;
   },
 };
+
+export const Contrast: Story = {
+  args: {
+    children: "Badge",
+    variant: "contrast",
+  },
+  render: (props) => {
+    return <Badge {...props} />;
+  },
+};
