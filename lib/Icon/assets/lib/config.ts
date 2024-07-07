@@ -1,5 +1,6 @@
 import Apple from './Apple';
 import Bars from './Bars';
+import Checked from './Checked';
 import Facebook from './Facebook';
 import Google from './Google';
 import Listen from './Listen';
@@ -18,6 +19,7 @@ import { SVGProps } from "react";
 export enum EIcon {
 	Apple = 'Apple',
 	Bars = 'Bars',
+	Checked = 'Checked',
 	Facebook = 'Facebook',
 	Google = 'Google',
 	Listen = 'Listen',
@@ -36,6 +38,7 @@ export enum EIcon {
 export const iconMap: Record<EIcon, React.FC<SVGProps<SVGSVGElement>>> = {
 	[EIcon.Apple]: Apple,
 	[EIcon.Bars]: Bars,
+	[EIcon.Checked]: Checked,
 	[EIcon.Facebook]: Facebook,
 	[EIcon.Google]: Google,
 	[EIcon.Listen]: Listen,
