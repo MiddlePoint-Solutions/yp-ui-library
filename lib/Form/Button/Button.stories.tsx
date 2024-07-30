@@ -37,7 +37,7 @@ export const Primary: Story = {
   },
 
   render: (props) => {
-    return <Button {...props} />;
+    return <Button isLoading {...props} />;
   },
 };
 
@@ -48,7 +48,7 @@ export const Secondary: Story = {
     variant: "secondary",
   },
   render: (props) => {
-    return <Button {...props} />;
+    return <Button isLoading {...props} />;
   },
 };
 
