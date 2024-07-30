@@ -12,6 +12,7 @@ export interface ButtonProps extends HButtonProps {
   variant?: "primary" | "secondary" | "ghost" | "text";
   noIndent?: boolean;
   icon?: EIcon;
+  isLoading?: boolean;
 }
 
 export const Button = forwardRef<
@@ -24,6 +25,7 @@ export const Button = forwardRef<
     noIndent,
     icon,
     className,
+    disabled,
     ...rest
   } = props;
 
@@ -33,9 +35,10 @@ export const Button = forwardRef<
         <button
           {...rest}
           ref={ref}
+          disabled={disabled || props.isLoading}
           className={twMerge(
             clsx(
-              "ripple",
+              "ripple overflow-hidden",
               "flex justify-center items-center gap-2 px-8 py-4 rounded-xl text-sm font-medium",
               variant === "secondary" &&
                 "bg-button-secondary-base hover:bg-button-secondary-hover text-button-secondary-text",
@@ -43,6 +46,7 @@ export const Button = forwardRef<
                 "bg-button-primary-base hover:bg-button-primary-hover text-button-primary-text",
               variant === "ghost" &&
                 "bg-transparent hover:bg-grayish-400 text-white",
+              disabled && "opacity-50 cursor-not-allowed",
               variant === "text" && "bg-transparent text-white p-0",
               noIndent && "gap-0 p-1 hover:bg-initial",
               className,
@@ -51,6 +55,13 @@ export const Button = forwardRef<
         >
           {icon && <Icon size={1.25} iconName={icon} />}
           {children}
+          {props.isLoading && (
+            <Icon
+              size={1.25}
+              iconName={EIcon.Spinner}
+              className="animate-spin"
+            />
+          )}
         </button>
       )}
     </HButton>
