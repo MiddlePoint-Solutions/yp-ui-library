@@ -3,6 +3,7 @@ import ArrowLine from './ArrowLine';
 import Bars from './Bars';
 import CheckedStroke from './CheckedStroke';
 import Checked from './Checked';
+import Close from './Close';
 import Facebook from './Facebook';
 import Google from './Google';
 import Hourglass from './Hourglass';
@@ -26,6 +27,7 @@ export enum EIcon {
 	Bars = 'Bars',
 	CheckedStroke = 'CheckedStroke',
 	Checked = 'Checked',
+	Close = 'Close',
 	Facebook = 'Facebook',
 	Google = 'Google',
 	Hourglass = 'Hourglass',
@@ -49,6 +51,7 @@ export const iconMap: Record<EIcon, React.FC<SVGProps<SVGSVGElement>>> = {
 	[EIcon.Bars]: Bars,
 	[EIcon.CheckedStroke]: CheckedStroke,
 	[EIcon.Checked]: Checked,
+	[EIcon.Close]: Close,
 	[EIcon.Facebook]: Facebook,
 	[EIcon.Google]: Google,
 	[EIcon.Hourglass]: Hourglass,
