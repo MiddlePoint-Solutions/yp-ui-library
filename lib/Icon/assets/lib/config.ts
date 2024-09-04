@@ -20,6 +20,7 @@ import Spinner from './Spinner';
 import Stack from './Stack';
 import X from './X';
 import { SVGProps } from "react";
+import MemberIcon from "./MemberIcon.tsx";
 
 export enum EIcon {
 	Apple = 'Apple',
@@ -43,6 +44,7 @@ export enum EIcon {
 	Spinner = 'Spinner',
 	Stack = 'Stack',
 	X = 'X',
+    MemberIcon = 'MemberIcon',
 }
 
 export const iconMap: Record<EIcon, React.FC<SVGProps<SVGSVGElement>>> = {
@@ -67,4 +69,5 @@ export const iconMap: Record<EIcon, React.FC<SVGProps<SVGSVGElement>>> = {
 	[EIcon.Spinner]: Spinner,
 	[EIcon.Stack]: Stack,
 	[EIcon.X]: X,
+    [EIcon.MemberIcon]: MemberIcon,
 }
